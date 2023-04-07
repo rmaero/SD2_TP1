@@ -1,0 +1,3 @@
+../source/MEF_PEATON.c:24:6:MEF_PEATON	16	static
+../source/MEF_PEATON.c:84:6:MEF_PEATON_INIT	16	static
+../source/MEF_PEATON.c:89:6:MEF_PEATON_periodicTask1ms	8	static
