@@ -11,11 +11,11 @@
 #endif /* MEF_MAIN_H_ */
 
 #define TIMER_2_MIN 	120000
-#define TIMER_1_MIN	30000
+#define TIMER_1_MIN		60000
 #define TIMER_30_SEG	30000
 #define TIMER_10_SEG	10000
 #define TIMER_5_SEG 	5000
-#define TIMER_200_MS 200
+#define TIMER_200_MS 	200
 
 #define LRR BOARD_LED_ID_ROJO
 #define LVR BOARD_LED_ID_VERDE

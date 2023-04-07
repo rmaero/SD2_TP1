@@ -60,7 +60,7 @@ bool MEF_CALLE_SECUNDARIA(){
 		board_setLed(LVR, OFF);											//LVR OFF
 		board_setLed(LRS, OFF);											//LRS OFF
 		if(key_getPressEv(BOARD_SW_ID_3)){
-					*sensorAddr--; 										//resto 1 unidad al valor guardado en la direccion "sensorAddr"
+					//*sensorAddr--; 										//resto 1 unidad al valor guardado en la direccion "sensorAddr"
 					*carsCrossedAddr++;									//sumo 1 unidad al valor guardado en la direccion "carsCrossedAddr"
 				}
 		if(timer_2==0){
