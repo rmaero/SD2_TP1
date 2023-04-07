@@ -430,7 +430,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x38 ./source/MEF_MAIN.o
  .debug_macro   0x00000000     0x87f8 ./source/MEF_MAIN.o
  .debug_macro   0x00000000       0x22 ./source/MEF_MAIN.o
- .debug_macro   0x00000000       0x2e ./source/MEF_MAIN.o
+ .debug_macro   0x00000000       0x58 ./source/MEF_MAIN.o
  .group         0x00000000        0xc ./source/MEF_PEATON.o
  .group         0x00000000        0xc ./source/MEF_PEATON.o
  .group         0x00000000        0xc ./source/MEF_PEATON.o
@@ -459,7 +459,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x38 ./source/MEF_PEATON.o
  .debug_macro   0x00000000     0x87f8 ./source/MEF_PEATON.o
  .debug_macro   0x00000000       0x22 ./source/MEF_PEATON.o
- .debug_macro   0x00000000       0x2e ./source/MEF_PEATON.o
+ .debug_macro   0x00000000       0x58 ./source/MEF_PEATON.o
  .group         0x00000000        0xc ./source/SD2_board.o
  .group         0x00000000        0xc ./source/SD2_board.o
  .group         0x00000000        0xc ./source/SD2_board.o
@@ -559,7 +559,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x38 ./source/main.o
  .debug_macro   0x00000000     0x87f8 ./source/main.o
  .debug_macro   0x00000000       0x22 ./source/main.o
- .debug_macro   0x00000000       0x2e ./source/main.o
+ .debug_macro   0x00000000       0x58 ./source/main.o
  .group         0x00000000        0xc ./source/mtb.o
  .group         0x00000000        0xc ./source/mtb.o
  .group         0x00000000        0xc ./source/mtb.o
@@ -2942,28 +2942,28 @@ LOAD linker stubs
  .debug_ranges  0x00000530      0x120 ./drivers/fsl_uart.o
  .debug_ranges  0x00000650       0x20 ./CMSIS/system_MKL46Z4.o
 
-.debug_macro    0x00000000      0xc8e
+.debug_macro    0x00000000      0xcb8
  .debug_macro   0x00000000       0x29 ./startup/startup_mkl46z4.o
  .debug_macro   0x00000029       0xb5 ./source/MEF_CALLE_SECUNDARIA.o
- .debug_macro   0x000000de       0x2e ./source/MEF_CALLE_SECUNDARIA.o
- .debug_macro   0x0000010c       0xbf ./source/MEF_MAIN.o
- .debug_macro   0x000001cb       0xb5 ./source/MEF_PEATON.o
- .debug_macro   0x00000280      0x12b ./source/SD2_board.o
- .debug_macro   0x000003ab       0x10 ./source/SD2_board.o
- .debug_macro   0x000003bb       0x10 ./source/SD2_board.o
- .debug_macro   0x000003cb      0x1d2 ./source/SD2_board.o
- .debug_macro   0x0000059d       0xa2 ./source/key.o
- .debug_macro   0x0000063f       0xab ./source/main.o
- .debug_macro   0x000006ea       0x2f ./source/mtb.o
- .debug_macro   0x00000719       0x82 ./source/mtb.o
- .debug_macro   0x0000079b       0x10 ./source/mtb.o
- .debug_macro   0x000007ab       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x000007bc      0x108 ./drivers/fsl_gpio.o
- .debug_macro   0x000008c4      0x107 ./drivers/fsl_i2c.o
- .debug_macro   0x000009cb       0x16 ./drivers/fsl_i2c.o
- .debug_macro   0x000009e1      0x108 ./drivers/fsl_lpsci.o
- .debug_macro   0x00000ae9      0x10e ./drivers/fsl_uart.o
- .debug_macro   0x00000bf7       0x97 ./CMSIS/system_MKL46Z4.o
+ .debug_macro   0x000000de       0x58 ./source/MEF_CALLE_SECUNDARIA.o
+ .debug_macro   0x00000136       0xbf ./source/MEF_MAIN.o
+ .debug_macro   0x000001f5       0xb5 ./source/MEF_PEATON.o
+ .debug_macro   0x000002aa      0x12b ./source/SD2_board.o
+ .debug_macro   0x000003d5       0x10 ./source/SD2_board.o
+ .debug_macro   0x000003e5       0x10 ./source/SD2_board.o
+ .debug_macro   0x000003f5      0x1d2 ./source/SD2_board.o
+ .debug_macro   0x000005c7       0xa2 ./source/key.o
+ .debug_macro   0x00000669       0xab ./source/main.o
+ .debug_macro   0x00000714       0x2f ./source/mtb.o
+ .debug_macro   0x00000743       0x82 ./source/mtb.o
+ .debug_macro   0x000007c5       0x10 ./source/mtb.o
+ .debug_macro   0x000007d5       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x000007e6      0x108 ./drivers/fsl_gpio.o
+ .debug_macro   0x000008ee      0x107 ./drivers/fsl_i2c.o
+ .debug_macro   0x000009f5       0x16 ./drivers/fsl_i2c.o
+ .debug_macro   0x00000a0b      0x108 ./drivers/fsl_lpsci.o
+ .debug_macro   0x00000b13      0x10e ./drivers/fsl_uart.o
+ .debug_macro   0x00000c21       0x97 ./CMSIS/system_MKL46Z4.o
 
 .debug_line     0x00000000     0x4d07
  .debug_line    0x00000000      0x1ed ./startup/startup_mkl46z4.o
@@ -2981,34 +2981,34 @@ LOAD linker stubs
  .debug_line    0x00003c2f      0xd89 ./drivers/fsl_uart.o
  .debug_line    0x000049b8      0x34f ./CMSIS/system_MKL46Z4.o
 
-.debug_str      0x00000000    0x4e907
+.debug_str      0x00000000    0x4e925
  .debug_str     0x00000000     0x309b ./startup/startup_mkl46z4.o
                                0x30c0 (size before relaxing)
- .debug_str     0x0000309b    0x40032 ./source/MEF_CALLE_SECUNDARIA.o
-                              0x42ee6 (size before relaxing)
- .debug_str     0x000430cd       0xcc ./source/MEF_MAIN.o
-                              0x42eaf (size before relaxing)
- .debug_str     0x00043199       0xc8 ./source/MEF_PEATON.o
-                              0x42ea3 (size before relaxing)
- .debug_str     0x00043261     0x898c ./source/SD2_board.o
+ .debug_str     0x0000309b    0x40050 ./source/MEF_CALLE_SECUNDARIA.o
+                              0x42f9c (size before relaxing)
+ .debug_str     0x000430eb       0xcc ./source/MEF_MAIN.o
+                              0x42f65 (size before relaxing)
+ .debug_str     0x000431b7       0xc8 ./source/MEF_PEATON.o
+                              0x42f59 (size before relaxing)
+ .debug_str     0x0004327f     0x898c ./source/SD2_board.o
                               0x4b6e7 (size before relaxing)
- .debug_str     0x0004bbed       0x83 ./source/key.o
+ .debug_str     0x0004bc0b       0x83 ./source/key.o
                               0x42d1a (size before relaxing)
- .debug_str     0x0004bc70      0x28c ./source/main.o
-                              0x42f96 (size before relaxing)
- .debug_str     0x0004befc      0x532 ./source/mtb.o
+ .debug_str     0x0004bc8e      0x28c ./source/main.o
+                              0x4304c (size before relaxing)
+ .debug_str     0x0004bf1a      0x532 ./source/mtb.o
                                0x31e7 (size before relaxing)
- .debug_str     0x0004c42e       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x0004c44c       0x1f ./source/semihost_hardfault.o
                                0x2cd4 (size before relaxing)
- .debug_str     0x0004c44d      0x106 ./drivers/fsl_gpio.o
+ .debug_str     0x0004c46b      0x106 ./drivers/fsl_gpio.o
                               0x4ab2b (size before relaxing)
- .debug_str     0x0004c553      0xd6d ./drivers/fsl_i2c.o
+ .debug_str     0x0004c571      0xd6d ./drivers/fsl_i2c.o
                               0x4ba44 (size before relaxing)
- .debug_str     0x0004d2c0      0xb20 ./drivers/fsl_lpsci.o
+ .debug_str     0x0004d2de      0xb20 ./drivers/fsl_lpsci.o
                               0x4b8c7 (size before relaxing)
- .debug_str     0x0004dde0      0x9e9 ./drivers/fsl_uart.o
+ .debug_str     0x0004ddfe      0x9e9 ./drivers/fsl_uart.o
                               0x4b8e4 (size before relaxing)
- .debug_str     0x0004e7c9      0x13e ./CMSIS/system_MKL46Z4.o
+ .debug_str     0x0004e7e7      0x13e ./CMSIS/system_MKL46Z4.o
                               0x4971c (size before relaxing)
 
 .comment        0x00000000       0x49

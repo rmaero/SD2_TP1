@@ -40,10 +40,10 @@ void MEF_MAIN(){
 			alreadyPressed=false;
 			break;
 		case RUTA:
-            board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_ON);	//LRS ON
-            board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_ON);				//LVR ON
-            board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_OFF);				//LRR OFF
-            board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_OFF);	//LVS OFF
+            board_setLed(LRR, OFF);											//LRR OFF
+            board_setLed(LVR ,ON);											//LVR ON
+            board_setLed(LRS, ON);											//LRS ON
+            board_setLed(LVS, OFF);											//LVS OFF
             if(key_getPressEv(BOARD_SW_ID_3))								//SI LLEGA UN AUTO A LA CALLE SECUND. CONTARLA
             	sensor++;
             if(sensor>=3)
@@ -57,9 +57,9 @@ void MEF_MAIN(){
             }
 			break;
 		case INTERMITENTE1:
-			board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_OFF);				//LRR OFF
-			board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_ON);	//LRS ON
-			board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_OFF);	//LVS OFF
+			board_setLed(LRR, OFF);											//LRR OFF
+			board_setLed(LRS, ON);											//LRS ON
+			board_setLed(LVS, OFF);											//LVS OFF
 
 			if(key_getPressEv(BOARD_SW_ID_3)){ 								//SI LLEGA UN AUTO A LA CALLE SECUND. CONTARLA
 				sensor++;
@@ -73,7 +73,7 @@ void MEF_MAIN(){
 
 			if(timer2==0){
 				timer2=TIMER_200_MS;
-				board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_TOGGLE);			//LVR TOGGLE
+				board_setLed(LVR, TOGGLE);									//LVR TOGGLE
 			}
             if(timer1==0){													//PASO AL PROX ESTADO
             	mefMain=SECUNDARIO;
@@ -81,10 +81,10 @@ void MEF_MAIN(){
             }
 			break;
 		case SECUNDARIO:
-			board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_ON);				//LRR ON
-			board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
-			board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
-			board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_ON);	//LVS ON
+			board_setLed(LRR, ON);											//LRR ON
+			board_setLed(LVR, OFF);											//LVR OFF
+			board_setLed(LRS, OFF);											//LRS OFF
+			board_setLed(LVS, ON);											//LVS ON
 			if(key_getPressEv(BOARD_SW_ID_3)){ 								//SI UN AUTO CRUZA LA CALLE SECUND.
 				carsCrossed++;												//CONTARLO COMO CRUZADO
 				sensor--;													//DESCONTARLO DE SENSOR
@@ -96,16 +96,16 @@ void MEF_MAIN(){
             }
 			break;
 		case INTERMITENTE2:
-			board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_ON);				//LRR ON
-			board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
-			board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
+			board_setLed(LRR,ON);											//LRR ON
+			board_setLed(LRS, OFF);											//LRS OFF
+			board_setLed(LVR, OFF);											//LVR OFF
 			if(key_getPressEv(BOARD_SW_ID_3)){ 								//SI UN AUTO CRUZA LA CALLE SECUND.
 				carsCrossed++;												//CONTARLO COMO CRUZADO
 				sensor--;													//DESCONTARLO DE SENSOR
 			}
 			if(timer2==0){
 				timer2=TIMER_200_MS;
-				board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_TOGGLE); //LVS TOGGLE
+				board_setLed(LVS, TOGGLE); 									//LVS TOGGLE
 			}
 			if(timer1==0){													//PASO AL PROX ESTADO
 				mefMain=RUTA;

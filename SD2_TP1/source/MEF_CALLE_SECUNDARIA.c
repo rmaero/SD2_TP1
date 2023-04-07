@@ -28,12 +28,12 @@ bool MEF_CALLE_SECUNDARIA(){
 		mefCalleSecundaria=RUTA_INTERMITENTE;
 		break;
 	case RUTA_INTERMITENTE:
-		board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_OFF);				//LRR OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_ON);	//LRS ON
-		board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_OFF);	//LVS OFF
+		board_setLed(LRR, OFF);											//LRR OFF
+		board_setLed(LRS, ON);											//LRS ON
+		board_setLed(LVS, OFF);											//LVS OFF
 		if(timer_2==0){
 			timer_2=TIMER_200_MS;
-			board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_TOGGLE);		//LVR TOGGLE
+			board_setLed(LVR, TOGGLE);									//LVR TOGGLE
 		}
 		if(timer_1==0){
 			mefCalleSecundaria=CALLE_SECUNDARIA;
@@ -41,10 +41,10 @@ bool MEF_CALLE_SECUNDARIA(){
 
 		break;
 	case CALLE_SECUNDARIA:
-		board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_ON);				//LRR ON
-		board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
-		board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_ON);	//LVS ON
+		board_setLed(LRR, ON);											//LRR ON
+		board_setLed(LVR, OFF);											//LVR OFF
+		board_setLed(LRS, OFF);											//LRS OFF
+		board_setLed(LVS, ON);											//LVS ON
 		if(key_getPressEv(BOARD_SW_ID_3)){
 			*sensorAddr--; 												//resto 1 unidad al valor guardado en la direccion "sensorAddr"
 			*carsCrossedAddr++;											//sumo 1 unidad al valor guardado en la direccion "carsCrossedAddr"
@@ -56,16 +56,16 @@ bool MEF_CALLE_SECUNDARIA(){
 		}
 		break;
 	case SECUNDARIO_INTERMITENTE:
-		board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_ON);				//LRR ON
-		board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
+		board_setLed(LRR, ON);											//LRR ON
+		board_setLed(LVR, OFF);											//LVR OFF
+		board_setLed(LRS, OFF);											//LRS OFF
 		if(key_getPressEv(BOARD_SW_ID_3)){
 					*sensorAddr--; 										//resto 1 unidad al valor guardado en la direccion "sensorAddr"
 					*carsCrossedAddr++;									//sumo 1 unidad al valor guardado en la direccion "carsCrossedAddr"
 				}
 		if(timer_2==0){
 			timer_2=TIMER_200_MS;
-			board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_TOGGLE);	//LVS TOGGLE
+			board_setLed(LVS, TOGGLE);									//LVS TOGGLE
 		}
 		if(timer_1==0){
 			ret=true;

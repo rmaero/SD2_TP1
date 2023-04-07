@@ -31,12 +31,12 @@ bool MEF_PEATON (){
 		mefPeaton=PEATON_RUTA_INTERMITENTE;
 		break;
 	case PEATON_RUTA_INTERMITENTE:
-		board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_OFF);				//LRR OFF
-		board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_OFF);	//LVS OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_ON);	//LRS ON
+		board_setLed(LRR, OFF);											//LRR OFF
+		board_setLed(LVS, OFF);											//LVS OFF
+		board_setLed(LRS, ON);											//LRS ON
 		if(timer2_==0){
 			timer2_=TIMER_200_MS;
-			board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_TOGGLE);		//LVR TOGGLE
+			board_setLed(LVR, TOGGLE);									//LVR TOGGLE
 		}
 		if(timer1_==0){
 			timer1_=TIMER_1_MIN;
@@ -44,10 +44,10 @@ bool MEF_PEATON (){
 		}
 		break;
 	case PEATON_SECUNDARIO:
-		board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_ON);				//LRR ON
-		board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
-		board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_ON);	//LVS ON
+		board_setLed(LRR, ON);											//LRR ON
+		board_setLed(LVR, OFF);											//LVR OFF
+		board_setLed(LRS, OFF);											//LRS OFF
+		board_setLed(LVS, ON);											//LVS ON
 		if(key_getPressEv(BOARD_SW_ID_3)){
 			*carsCrossed_addr++;
 			if(*sensor_addr)
@@ -60,9 +60,9 @@ bool MEF_PEATON (){
 		}
 		break;
 	case PEATON_INTERMITENTE:
-		board_setLed(BOARD_LED_ID_VERDE, BOARD_LED_MSG_OFF);			//LVR OFF
-		board_setLed(BOARD_LED_ID_ROJO_SECUNDARIO, BOARD_LED_MSG_OFF);	//LRS OFF
-		board_setLed(BOARD_LED_ID_VERDE_SECUNDARIO, BOARD_LED_MSG_ON);	//LVS ON
+		board_setLed(LVR, OFF);											//LVR OFF
+		board_setLed(LRS, OFF);											//LRS OFF
+		board_setLed(LVS, ON);											//LVS ON
 		if(key_getPressEv(BOARD_SW_ID_3)){
 			*carsCrossed_addr++;
 			if(*sensor_addr)
@@ -70,7 +70,7 @@ bool MEF_PEATON (){
 		}
 		if(timer2_==0){
 			timer2_=TIMER_200_MS;
-			board_setLed(BOARD_LED_ID_ROJO, BOARD_LED_MSG_TOGGLE);		//LRR TOGGLE
+			board_setLed(LRR, TOGGLE);									//LRR TOGGLE
 		}
 		if(timer1_==0){
 			ret=true;

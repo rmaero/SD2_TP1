@@ -6,7 +6,7 @@
  * Generated linker script file for MKL46Z256xxx4
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.6.1 [Build 8255] [2022-10-03] on 6 abr. 2023 16:53:59
+ * MCUXpresso IDE v11.6.1 [Build 8255] [2022-10-03] on 7 abr. 2023 17:31:48
  */
 
 INCLUDE "SD2_TP1_Debug_library.ld"
