@@ -20,6 +20,6 @@ typedef enum {
 
 bool MEF_PEATON ();
 
-void MEF_PEATON_INIT(uint8_t* s, uint8_t* c);
+void MEF_PEATON_INIT();
 
 void MEF_PEATON_periodicTask1ms();

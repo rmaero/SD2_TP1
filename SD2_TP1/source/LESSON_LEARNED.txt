@@ -1,0 +1,5 @@
+Durante el desarrollo de la implementacion nos encontramos con varios problemas, 
+*No podiamos repetir el nombre de los timers entre los archivos de MEF (por mas que esten internos a cada .c y no declarados hacia afuera en sus .h respectivos, el compilador daba error por tener declaradas "multiples instancias" de la misma variable.
+*Para compartir las variables sensor y carsCrossed, no queriamos utilizar variables globales, primero optamos por pasar como argumento en el init() a las sub-mef, el puntero a la direccion de memoria. Haciendo esto el compilador nos daba un warning que cada vez que modificabamos con ++; o --; el contenido de esos punteros, la variable no era utilizada.
+Optamos por implementar funciones de get(), increase() y decrease() para manipular los valores de estas dos variables, al estilo orientacion a objetos y de esta manera el unico que maneja realmente las variables es el MEF_MAIN.
+*Nos encontramos con varios estados de "INTERMITENTE" donde no teniamos en cuenta que si se pulsaba el SW3 debiamos contar autos, ya sea para incrementar/decrementar sensor o para incrementar carsCrossed.

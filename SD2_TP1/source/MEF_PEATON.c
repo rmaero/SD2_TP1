@@ -11,10 +11,6 @@
 #include "MEF_PEATON.h"
 #include "MEF_MAIN.h"
 
-//punteros a sensor y carsCrossed
-uint8_t* sensor_addr;
-uint8_t* carsCrossed_addr;
-
 uint32_t timer1_;
 uint32_t timer2_;
 
@@ -34,6 +30,10 @@ bool MEF_PEATON (){
 		board_setLed(LRR, OFF);											//LRR OFF
 		board_setLed(LVS, OFF);											//LVS OFF
 		board_setLed(LRS, ON);											//LRS ON
+		//TODO: AGREGAR AL DISENIO durante este estado tambien pueden aparecer autos y se deberian acumular en sensor
+		if(key_getPressEv(BOARD_SW_ID_3)){
+			MEF_MAIN_increaseSensor();
+		}
 		if(timer2_==0){
 			timer2_=TIMER_200_MS;
 			board_setLed(LVR, TOGGLE);									//LVR TOGGLE
@@ -48,10 +48,10 @@ bool MEF_PEATON (){
 		board_setLed(LVR, OFF);											//LVR OFF
 		board_setLed(LRS, OFF);											//LRS OFF
 		board_setLed(LVS, ON);											//LVS ON
-		if(key_getPressEv(BOARD_SW_ID_3)){
-			*carsCrossed_addr++;
-			if(*sensor_addr)
-				*sensor_addr--;
+		if(key_getPressEv(BOARD_SW_ID_3)){								//si paso un auto contarlo
+			MEF_MAIN_increaseCarsCrossed();
+			if(MEF_MAIN_getSensor())									//y descontarlo de los autos esperando, si hubiese
+				MEF_MAIN_decreaseSensor();
 		}
 		if(timer1_==0){
 			timer1_=TIMER_10_SEG;
@@ -63,10 +63,10 @@ bool MEF_PEATON (){
 		board_setLed(LVR, OFF);											//LVR OFF
 		board_setLed(LRS, OFF);											//LRS OFF
 		board_setLed(LVS, ON);											//LVS ON
-		if(key_getPressEv(BOARD_SW_ID_3)){
-			*carsCrossed_addr++;
-			if(*sensor_addr)
-				*sensor_addr--;
+		if(key_getPressEv(BOARD_SW_ID_3)){								//si paso un auto contarlo
+			MEF_MAIN_increaseCarsCrossed();
+			if(MEF_MAIN_getSensor())
+				MEF_MAIN_decreaseSensor();											//y descontarlo de los autos esperando, si hubiese
 		}
 		if(timer2_==0){
 			timer2_=TIMER_200_MS;
@@ -81,9 +81,7 @@ bool MEF_PEATON (){
 	return ret;
 }
 
-void MEF_PEATON_INIT(uint8_t* s, uint8_t* c){
-	sensor_addr=s;
-	carsCrossed_addr=c;
+void MEF_PEATON_INIT(){
 	mefPeaton = PEATON_INIT;
 }
 void MEF_PEATON_periodicTask1ms(){

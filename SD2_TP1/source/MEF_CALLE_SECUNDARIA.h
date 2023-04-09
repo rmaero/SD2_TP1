@@ -20,7 +20,7 @@ typedef enum {
 
 bool MEF_CALLE_SECUNDARIA();
 
-void MEF_CALLE_SECUNDARIA_INIT(uint8_t* s, uint8_t* c);
+void MEF_CALLE_SECUNDARIA_INIT();
 
 void MEF_CALLE_SECUNDARIA_periodicTask1ms();
 

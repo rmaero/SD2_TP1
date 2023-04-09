@@ -46,10 +46,11 @@ void MEF_MAIN(){
             board_setLed(LVS, OFF);											//LVS OFF
             if(key_getPressEv(BOARD_SW_ID_3))								//SI LLEGA UN AUTO A LA CALLE SECUND. CONTARLA
             	sensor++;
-            if(sensor>=3)
+            if(sensor>=3){
             	mefMain=TO_MEF_CALLE_SEC;
+            	MEF_CALLE_SECUNDARIA_INIT(&sensor, &carsCrossed); //le paso la direcc de memoria a la submef para que pueda manipular los datos
             	//TODO AGREGAR UN break; ACA?? PARA QUE SALGA DEL SWITCH Y VAYA DIRECTAMENTE A LA SUBMEF
-
+            }
             if(timer1==0){													//PASO AL PROX ESTADO
             	mefMain=INTERMITENTE1;
             	timer1=TIMER_5_SEG;
@@ -120,7 +121,6 @@ void MEF_MAIN(){
 		case TO_MEF_CALLE_SEC:
 			if(MEF_CALLE_SECUNDARIA()){
 				mefMain=RUTA;												//termino la mef calle secundaria, devuelvo al mefMain con reset
-				//MEF_MAIN_RESET();
 				timer1=TIMER_2_MIN;
 				timer2=0;
 				alreadyPressed=false;
@@ -129,13 +129,7 @@ void MEF_MAIN(){
 	}
 }
 
-/*
-void MEF_MAIN_RESET(){
-	mefMain = RUTA;
 
-}
-
-*/
 void MEF_MAIN_periodicTask1ms(){
 	if(timer1!=0 && (mefMain!=TO_MEF_PEATON)){ 								//freno timers si estoy en la submef peaton
 		timer1--;
@@ -147,4 +141,24 @@ void MEF_MAIN_periodicTask1ms(){
 		MEF_PEATON_periodicTask1ms();
 	if(mefMain==TO_MEF_CALLE_SEC)
 		MEF_CALLE_SECUNDARIA_periodicTask1ms();
+}
+
+uint8_t MEF_MAIN_getSensor(){
+	return sensor;
+}
+
+void MEF_MAIN_increaseSensor(){
+	sensor++;
+}
+
+void MEF_MAIN_decreaseSensor(){
+	if(sensor) //no me gusta pero es para asegurar que no pase a valores negativos
+		sensor--;
+}
+
+uint8_t MEF_MAIN_getCarsCrossed(){
+	return carsCrossed;
+}
+void MEF_MAIN_increaseCarsCrossed(){
+	carsCrossed++;
 }

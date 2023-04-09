@@ -1,2 +1,7 @@
 ../source/MEF_MAIN.c:25:6:MEF_MAIN	8	static
-../source/MEF_MAIN.c:139:6:MEF_MAIN_periodicTask1ms	8	static
+../source/MEF_MAIN.c:133:6:MEF_MAIN_periodicTask1ms	8	static
+../source/MEF_MAIN.c:146:9:MEF_MAIN_getSensor	8	static
+../source/MEF_MAIN.c:150:6:MEF_MAIN_increaseSensor	8	static
+../source/MEF_MAIN.c:154:6:MEF_MAIN_decreaseSensor	8	static
+../source/MEF_MAIN.c:159:9:MEF_MAIN_getCarsCrossed	8	static
+../source/MEF_MAIN.c:162:6:MEF_MAIN_increaseCarsCrossed	8	static

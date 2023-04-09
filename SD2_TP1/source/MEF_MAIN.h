@@ -28,7 +28,12 @@
 
 void MEF_MAIN();
 
-//void MEF_MAIN_RESET();
+uint8_t MEF_MAIN_getSensor();
+void MEF_MAIN_increaseSensor();
+void MEF_MAIN_decreaseSensor();
+
+uint8_t MEF_MAIN_getCarsCrossed();
+void MEF_MAIN_increaseCarsCrossed();
 
 void MEF_MAIN_periodicTask1ms();
 
