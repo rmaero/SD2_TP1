@@ -1,0 +1,3 @@
+../source/MEF_CALLE_SECUNDARIA.c:19:6:MefCalleSecundaria	16	static
+../source/MEF_CALLE_SECUNDARIA.c:80:6:MefCalleSecundaria_init	8	static
+../source/MEF_CALLE_SECUNDARIA.c:84:6:MefCalleSecundaria_periodicTask1ms	8	static

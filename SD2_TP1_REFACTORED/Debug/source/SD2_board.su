@@ -1,0 +1,10 @@
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_clock.h:601:20:CLOCK_EnableClock	24	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_port.h:268:20:PORT_SetPinConfig	32	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_gpio.h:188:20:GPIO_PortSet	16	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_gpio.h:208:20:GPIO_PortClear	16	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_gpio.h:231:20:GPIO_PortToggle	16	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_gpio.h:258:24:GPIO_PinRead	16	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\drivers/fsl_gpio.h:267:24:GPIO_ReadPinInput	16	static
+../source/SD2_board.c:68:6:board_init	32	static
+../source/SD2_board.c:127:6:board_setLed	16	static
+../source/SD2_board.c:148:6:board_getSw	16	static

@@ -1,0 +1,7 @@
+../source/MEF_SUPER.c:29:6:MefSuper	24	static
+../source/MEF_SUPER.c:59:6:MefSuper_periodicTask1ms	8	static
+../source/MEF_SUPER.c:68:9:MefSuper_getCarsWaiting	8	static
+../source/MEF_SUPER.c:72:6:MefSuper_increaseCarsWaiting	8	static
+../source/MEF_SUPER.c:76:6:MefSuper_decreaseCarsWaiting	8	static
+../source/MEF_SUPER.c:81:9:MefSuper_getCarsCrossed	8	static
+../source/MEF_SUPER.c:84:6:MefSuper_increaseCarsCrossed	8	static

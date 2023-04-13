@@ -1,0 +1,4 @@
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\CMSIS/core_cm0plus.h:840:22:__NVIC_SetPriority	24	static
+E:\Rodrigo\FACULTAD\Sistemas Digitales 2\Practica 1\SD2_TP1_REFACTORED\CMSIS/core_cm0plus.h:994:26:SysTick_Config	16	static
+../source/main.c:28:5:main	8	static
+../source/main.c:45:6:SysTick_Handler	8	static
